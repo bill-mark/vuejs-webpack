@@ -18,6 +18,10 @@ const config = {
                 loader:'vue-loader'
             },
             {
+                test: /\.jsx$/,
+                loader: 'babel-loader'
+            },
+            {
                 test:/\.css$/,
                 use:[
                     'style-loader',
@@ -29,6 +33,12 @@ const config = {
                 use: [
                     'style-loader',
                     'css-loader',
+                    {
+                        loader:'postcss-loader',
+                        options: {
+                            sourceMap: true,//stylus-loader已经生成了sourcemap,配置为true,避免再生成一次
+                        }
+                    },
                     'stylus-loader'
                 ]
             },
