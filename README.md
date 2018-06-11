@@ -10,3 +10,6 @@ NODE_ENV:isDev ? ' "development" ' :' "production" '
 
 #3 sourcemap
 方便调试:将浏览器里的代码显示成开发者自己写的.代码映射
+
+#4  "extract-text-webpack-plugin"
+CSS分离打包工具
